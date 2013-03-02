@@ -12,6 +12,8 @@ import com.aravind.project.elf.adapters.CustomAdapter;
 import com.aravind.project.elf.interfaces.IAbsListViewSetup;
 import com.aravind.project.elf.listeners.EndlessScrollListener;
 
+/**
+ */
 public abstract class BaseAbsListViewHelperFragment extends BaseFragment implements IAbsListViewSetup {
 
 	protected CustomAdapter adapter;
@@ -22,10 +24,16 @@ public abstract class BaseAbsListViewHelperFragment extends BaseFragment impleme
 	protected AbsListView absListView;
 	protected LayoutInflater inflater;
 
+	/**
+	 */
 	public interface BaseListViewListener extends BaseFragmentListener {
 
 	}
 
+	/**
+	 * Method onAttach.
+	 * @param activity Activity
+	 */
 	@Override
 	public void onAttach(Activity activity) {
 
@@ -44,6 +52,10 @@ public abstract class BaseAbsListViewHelperFragment extends BaseFragment impleme
 		mActivity = null;
 	}
 
+	/**
+	 * Method onActivityCreated.
+	 * @param savedInstanceState Bundle
+	 */
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		setRetainInstance(true);
